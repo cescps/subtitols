@@ -34,4 +34,14 @@ button.stop {
     font-size: 24px;
     white-space: pre-line;
     margin-top: 10px; /* Add margin to transcription for spacing */
+    font-weight: bold; /* Make text bolder */
+
+}
+
+/* Media query for smaller screens (adjust as needed) */
+@media only screen and (max-width: 600px) {
+    #transcription {
+        font-size: 18px;
+        margin: 5px; /* Adjust margin for smaller screens */
+    }
 }
