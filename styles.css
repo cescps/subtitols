@@ -11,10 +11,10 @@ body {
 }
 
 button {
-    font-size: 16px; /* Set the button font size */
+    font-size: 16px;
     padding: 10px 20px;
-    margin-bottom: 20px;
-    background-color: #4CAF50; /* Green */
+    margin-top: auto; /* Move button to the bottom */
+    background-color: #4CAF50; /* Green by default */
     color: white;
     border: none;
     border-radius: 8px;
@@ -26,7 +26,12 @@ button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
 
+button.stop {
+    background-color: #FF0000; /* Red when in "Stop" state */
+}
+
 #transcription {
     font-size: 24px;
     white-space: pre-line;
+    margin-bottom: 20px; /* Add margin to transcription for spacing */
 }
