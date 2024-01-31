@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
         recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
 
-        recognition.continuous = false;
+        recognition.continuous = true; // Set to true for continuous transcription
         recognition.interimResults = true;
         recognition.lang = 'ca-ES'; // Set to Catalan in Spain
 
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         recognition.onend = function () {
             startButton.disabled = false;
-            startButton.textContent = 'Start';
+            startButton.textContent = 'Start Transcription';
             startButton.classList.remove('stop');
         };
 
