@@ -5,8 +5,8 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
     font-family: 'Inter', sans-serif; /* Use Inter font */
 }
 
