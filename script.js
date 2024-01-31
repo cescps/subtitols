@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         recognition.onend = function () {
             startButton.disabled = false;
-            startButton.textContent = 'Start Transcription';
+            startButton.textContent = 'Start';
             startButton.classList.remove('stop');
         };
 
