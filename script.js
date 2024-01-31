@@ -11,11 +11,16 @@ document.addEventListener('DOMContentLoaded', function () {
         recognition.lang = 'ca-ES'; // Set to Catalan in Spain
 
         recognition.onresult = function (event) {
-            const transcript = Array.from(event.results)
-                .map(result => result[0].transcript)
-                .join('\n');
+            let transcript = '';
+            for (let i = event.resultIndex; i < event.results.length; i++) {
+                if (event.results[i].isFinal) {
+                    transcript += event.results[i][0].transcript + ' ';
+                } else {
+                    transcript += event.results[i][0].transcript;
+                }
+            }
 
-            transcriptionDiv.textContent = transcript;
+            transcriptionDiv.textContent = transcript.trim();
         };
 
         recognition.onend = function () {
