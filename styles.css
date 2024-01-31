@@ -5,10 +5,13 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    font-family: 'Inter', sans-serif; /* Use Inter font */
 }
 
 button {
-    font-size: 18px;
+    font-size: 16px; /* Set the button font size */
     padding: 10px 20px;
     margin-bottom: 20px;
     background-color: #4CAF50; /* Green */
