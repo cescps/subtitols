@@ -3,11 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const transcriptionDiv = document.getElementById('transcription');
     let recognition;
 
-    // Check if the browser supports the Web Speech API
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
         recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
 
-        recognition.continuous = true;
+        recognition.continuous = false; // Set to false to stop after a single speech recognition event
         recognition.interimResults = true;
         recognition.lang = 'en-US';
 
