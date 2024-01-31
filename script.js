@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         recognition.onend = function () {
             startButton.disabled = false;
-            startButton.textContent = 'Start Transcription';
-            startButton.classList.remove('stop');
+            startButton.textContent = recognition.active ? 'Stop' : 'Start';
+            startButton.classList.toggle('stop', recognition.active);
         };
 
         startButton.addEventListener('click', function () {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 recognition.stop();
             } else {
                 recognition.start();
-                startButton.classList.toggle('stop');
+                startButton.classList.toggle('stop', true);
                 startButton.disabled = true;
                 transcriptionDiv.textContent = '';
             }
