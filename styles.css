@@ -31,7 +31,7 @@ button.stop {
 }
 
 #transcription {
-    font-size: 28px; /* Increased transcription font size */
+    font-size: 100px; /* Increased transcription font size */
     white-space: pre-line;
     margin: 20px 10%; /* Added lateral margins for better spacing */
     font-weight: bold; /* Make text bolder */
@@ -40,7 +40,7 @@ button.stop {
 /* Media query for smaller screens (adjust as needed) */
 @media only screen and (max-width: 600px) {
     #transcription {
-        font-size: 20px; /* Adjusted font size for smaller screens */
+        font-size: 70px; /* Adjusted font size for smaller screens */
         margin: 10px; /* Adjusted margin for smaller screens */
     }
 }
