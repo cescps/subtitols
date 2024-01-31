@@ -26,15 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
         recognition.onend = function () {
             startButton.disabled = false;
             startButton.textContent = 'Start Transcription';
+            startButton.classList.remove('stop');
         };
 
         startButton.addEventListener('click', function () {
             if (recognition && recognition.active) {
                 recognition.stop();
-                startButton.textContent = 'Start Transcription';
             } else {
                 recognition.start();
-                startButton.textContent = 'Stop Transcription';
+                startButton.classList.add('stop');
                 startButton.disabled = true;
                 transcriptionDiv.textContent = '';
             }
