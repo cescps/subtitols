@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
         recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
 
-        recognition.continuous = false; // Set to false to stop after a single speech recognition event
+        recognition.continuous = false;
         recognition.interimResults = true;
-        recognition.lang = 'en-US';
+        recognition.lang = 'ca-ES'; // Set to Catalan in Spain
 
         recognition.onresult = function (event) {
             const transcript = Array.from(event.results)
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 recognition.start();
                 startButton.textContent = 'Stop Transcription';
                 startButton.disabled = true;
-                transcriptionDiv.textContent = ''; // Clear previous transcriptions
+                transcriptionDiv.textContent = '';
             }
         });
     } else {
