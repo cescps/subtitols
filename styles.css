@@ -11,9 +11,9 @@ body {
 }
 
 button {
-    font-size: 16px;
+    font-size: 18px; /* Increased button font size */
     padding: 10px 20px;
-    margin-top: 20px; 
+    margin-top: 30px; /* Adjusted margin for the button */
     background-color: #4CAF50; /* Green by default */
     color: white;
     border: none;
@@ -31,17 +31,16 @@ button.stop {
 }
 
 #transcription {
-    font-size: 24px;
+    font-size: 28px; /* Increased transcription font size */
     white-space: pre-line;
-    margin-top: 10px; /* Add margin to transcription for spacing */
+    margin: 20px 10%; /* Added lateral margins for better spacing */
     font-weight: bold; /* Make text bolder */
-
 }
 
 /* Media query for smaller screens (adjust as needed) */
 @media only screen and (max-width: 600px) {
     #transcription {
-        font-size: 18px;
-        margin: 5px; /* Adjust margin for smaller screens */
+        font-size: 20px; /* Adjusted font size for smaller screens */
+        margin: 10px; /* Adjusted margin for smaller screens */
     }
 }
